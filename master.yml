@@ -1,0 +1,16 @@
+# Contain Parameters of K8sMaster Instance
+#
+# 
+i_name: "Auto_kubernetes_master"   # Instance name
+key: "newkey"                      # Instance keyfile name
+i_type: "t2.micro"                 # Instance type
+img: 'ami-08e0ca9924195beba'       # AMI iD
+subnet: 'subnet-3bb8bd53'          # Subnet ID
+sg: 'sg-0a238838d3301e9dc'         # Security Group ID
+counts: 1                          # Instance Count
+zone: 'ap-south-1'                 # Regon
+grp_tag: "k8sMasterA"              # Inventory Group Tag  ( Don't Change it, If you chang it then you also have to change main playbook host )
+inventory: "/etc/ansible/hosts"    # Inventory path
+use_case: "kubernetes"             # -
+tag: "k8sMaster"                   # required Special Tag
+ssh_key_full_path: "/home/ec2-user/newkey.pem"    # Inventory path
